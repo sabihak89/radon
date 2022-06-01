@@ -1,0 +1,19 @@
+{
+  "name": "nainesh",
+  "version": "1.0.0",
+  "description": "it feel amazing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabihak89/radon.git"
+  },
+  "author": "nainesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabihak89/radon/issues"
+  },
+  "homepage": "https://github.com/sabihak89/radon#readme"
+}
