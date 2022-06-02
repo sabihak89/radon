@@ -1,10 +1,11 @@
 {
-  "name": "src",
+  "name": "radon",
   "version": "1.0.0",
-  "description": "Backend cohort for Thorium(feb-May)",
+  "description": "Backend cohort for Radon(May-Sep)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "command1": "fssffdggdgdgdgdfgdfgdfgdfgdfgdf dfgdfg dgdg dfgfg  dgdfg dgdg"
   },
   "author": "",
   "license": "ISC",
