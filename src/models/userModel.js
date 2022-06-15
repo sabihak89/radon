@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema( {
         enum: ["male", "female", "other"]
     },
     age: Number,
+    posts: {type: [], deafult: []}
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema)

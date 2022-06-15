@@ -48,7 +48,7 @@ const getUserData = async function (req, res) {
   if (!token) return res.send({ status: false, msg: "token must be present" });
 
   console.log(token);
-  
+
   // If a token is present then decode the token with verify function
   // verify takes two inputs:
   // Input 1 is the token to be decoded
@@ -63,22 +63,17 @@ const getUserData = async function (req, res) {
   if (!userDetails)
     return res.send({ status: false, msg: "No such user exists" });
 
-  res.send({ status: true, data:userDetails });
+  res.send({ status: true, data: userDetails });
 };
 
-const updateUser = async function (req, res) {
-// Do the same steps here:
-// Check if the token is present
-// Check if the token present is a valid token
-// Return a different error message in both these cases
 
+const updateUser = async function (req, res) {
   let userId = req.params.userId;
   let user = await userModel.findById(userId);
   //Return an error if no user with the given id exists in the db
   if (!user) {
-    return res.send({status: false, msg:"No Such User Exists"});
+    return res.send({ status: false, msg: "No Such User Exists" });
   }
-
   let userData = req.body;
   let updatedUser = await userModel.findOneAndUpdate({ _id: userId }, userData);
   res.send({ status: updatedUser, data: updatedUser });
@@ -86,19 +81,24 @@ const updateUser = async function (req, res) {
 
 
 
-const deleteUser = async function (req, res){
+
+const deleteUser = async function (req, res) {
   let userId = req.params.userId;
-  let (userId) = await userModel.findById;
-  if(!user){
-    return res.send({status: false, msg: "No Such User Exists"})
+  let(userId) = await userModel.findById;
+  if (!user) {
+    return res.send({ status: false, msg: "No Such User Exists" })
   }
-  let deleteUser = await userModel.findByIdAndUpdate({_id: userId},{$set:{isDeleted:true}},{new:true});
-  res.send({ status: deleteUser, data: deleteUser});
+  let deleteUser = await userModel.findByIdAndUpdate({ _id: userId }, { $set: { isDeleted: true } }, { new: true });
+  res.send({ status: deleteUser, data: deleteUser });
 
 };
+
+
+
 
 module.exports.createUser = createUser;
 module.exports.getUserData = getUserData;
 module.exports.updateUser = updateUser;
 module.exports.loginUser = loginUser;
-module.exports.deleteUser = deleteUser
+module.exports.deleteUser = deleteUser;
+
