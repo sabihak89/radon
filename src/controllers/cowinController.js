@@ -77,10 +77,10 @@ const getSessionByDistrict = async (req, res) => {
     let date = req.query.date;
     let options = {
       method: "get",
-      url: `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${distId}&date=${date}`,
+      url: `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${distId}&date=${date}`
     };
     let result = await axios(options);
-    res.status(200).send({ data: result.data });
+    return res.status(200).send({ data: result.data });
   } catch (err) {
     return res.status(500).send({ msg: err.message });
   }
