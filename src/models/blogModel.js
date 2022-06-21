@@ -18,11 +18,11 @@ const blogSchema = new mongoose.Schema( {
         type: Array,
     },
     category:{
-        type:String,
+        type:[],
         required:true
     },
     subcategory: {
-        type:String},
+        type:[]},
     isDeleted: {
      type:Boolean,
      default: false},
