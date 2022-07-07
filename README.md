@@ -13,7 +13,7 @@
 { 
   title: {string, mandatory, enum[Mr, Mrs, Miss]},
   name: {string, mandatory},
-  phone: {Number, mandatory, unique},
+  phone: {String, mandatory, unique},
   email: {string, mandatory, valid email, unique}, 
   password: {string, mandatory, minLen 8, maxLen 15},
   address: {
@@ -170,7 +170,7 @@ Refer below sample
   _id: ObjectId("88abc190ef0288abc190ef02"),
   title: "Mr",
   name: "John Doe",
-  phone: 9897969594,
+  phone: "9897969594",
   email: "johndoe@mailinator.com", 
   password: "abcd1234567",
   address: {
